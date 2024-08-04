@@ -8,6 +8,8 @@ export default function Activity (props) {
 
     const changeStatus = (activity, idx)=>{
         dispatch({type:"CHANGESTATUS", payload:{type:activity.activityType,index:idx }})
+        console.log(idx)
+        // dispatch({type:"COUNTSCORE"})
         toast.success("status changed", { delay: 100 })
     }
 
@@ -30,7 +32,7 @@ export default function Activity (props) {
     }
     `
     return (
-        <Style onClick={() => changeStatus(currAct, idx)} activitystate={activity[1]} className="week col-3 text-light m-3 p-1 d-flex align-items-center justify-content-center">
+        <Style onClick={() => changeStatus(currAct, idx)} activitystate={activity[1]} className="week col-3 text-light m-3 p-1 d-flex rounded align-items-center justify-content-center">
             <h4>{activity[0]}</h4>
         </Style>
     )

@@ -54,3 +54,19 @@ code {
   margin: auto;
   background-color: rgb(39, 81, 105);
 }
+
+.app{
+  text-decoration: none;
+  font-size: large;
+  position: relative;
+  top: 5px;
+}
+
+.home{
+  min-height: 80vh;
+  height: auto;
+}
+
+.quote{
+  background-color:  rgb(39, 81, 105);
+}

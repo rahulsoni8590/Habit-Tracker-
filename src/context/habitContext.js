@@ -63,7 +63,7 @@ function HabitContextProvider({ children }) {
     const createHabit = (habit) => {
 
         let track = {}
-        for (let i = 0; i <= 6; i++) {
+        for (let i = 0; i >= -6; i--) {
             let currentDate = new Date(Date.now())
             currentDate.setDate(currentDate.getDate() + i)
             let nextDate = currentDate.toUTCString().slice(0, 16)

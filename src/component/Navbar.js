@@ -1,9 +1,7 @@
-import NewHabit from "./addHabit";
-import { useState } from "react";
-import Button from 'react-bootstrap/Button';
+import { Link } from "react-router-dom";
+
 
 export default function Navbar() {
-    const [modalShow, setModalShow] = useState(false);
 
     return (
         <>
@@ -11,20 +9,26 @@ export default function Navbar() {
                 <div className="collapse navbar-collapse d-flex justify-content-around" id="navbarNav">
                     <ul className="navbar-nav">
                         <li className="nav-item active">
-                            <h2 className="nav-link text-light">Habit Tracker</h2>
+                            <Link to={"/"} style={{ textDecoration: 'none' }}>
+                                <h2 className="app nav-link text-light">Habit Tracker</h2>
+                            </Link>
                         </li>
                     </ul>
-                    <div className="my-2 my-lg-0">
-                        <Button variant="primary" onClick={() => setModalShow(true)}>
-                            Add Habit
-                        </Button>
-                        <NewHabit
-                            show={modalShow}
-                            onHide={() => setModalShow(false)}
-                        />
+                    <div className="col-4 d-flex flex-row justify-content-around">
+                        <div className="my-2 my-lg-0">
+                            <Link to={"/"}>
+                                <button className="btn btn-primary">Home</button>
+                            </Link>
+                        </div>
+                        <div className="my-2 my-lg-0">
+                            <Link to={"activity"}>
+                                <button className="btn btn-primary">Activity</button>
+                            </Link>
+                        </div>
                     </div>
                 </div>
             </nav>
+
         </>
     )
 

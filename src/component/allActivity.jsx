@@ -2,7 +2,7 @@ import { useState } from "react"
 import { useHabit } from "../context/habitContext"
 import Activity from "./activityTrack"
 
-export default function Home() {
+export default function Allactivity() {
     const [currAct, setCurrActivity] = useState(null)
     const { state } = useHabit()
 

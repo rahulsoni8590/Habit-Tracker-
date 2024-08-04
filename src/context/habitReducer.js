@@ -8,7 +8,6 @@ function habitReducer(state,action){
             }
         }
         case "CHANGESTATUS":{
-            console.log(state)
             const idx = state.activity.findIndex((type)=>type.activityType===action.payload.type)
             switch(state.activity[idx].track[action.payload.index][1]){
                 case "Done":
@@ -33,6 +32,10 @@ function habitReducer(state,action){
                 }
             }
     }
+    case "COUNTSCORE":
+        return{
+            ...state
+        }
     default:{
         return{
             ...state
